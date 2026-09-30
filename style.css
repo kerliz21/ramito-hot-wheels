@@ -1,0 +1,747 @@
+/* ============================= */
+/* CONFIGURACIÓN GENERAL */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #63117d, transparent 45%),
+        linear-gradient(135deg, #12001f, #27002f, #09000f);
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+
+/* ============================= */
+/* CONTENEDOR */
+/* ============================= */
+
+.contenedor {
+    width: 100%;
+    max-width: 900px;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+
+/* ============================= */
+/* TÍTULO */
+/* ============================= */
+
+h1 {
+    font-size: 40px;
+
+    margin-bottom: 10px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #ff1493,
+        0 0 20px #ff1493,
+        3px 3px 5px black;
+}
+
+
+.mensaje {
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+    color: #ffd6ec;
+}
+
+
+/* ============================= */
+/* RAMO */
+/* ============================= */
+
+.ramo {
+    position: relative;
+
+    width: 550px;
+    height: 550px;
+
+    margin: auto;
+}
+
+
+/* ============================= */
+/* TALLOS */
+/* ============================= */
+
+.tallo {
+    position: absolute;
+
+    width: 7px;
+    height: 260px;
+
+    background: linear-gradient(
+        90deg,
+        #0b5c27,
+        #36b65a
+    );
+
+    bottom: 80px;
+
+    left: 50%;
+
+    transform-origin: bottom;
+
+    border-radius: 10px;
+
+    z-index: 1;
+}
+
+
+.tallo1 {
+    transform: rotate(-30deg);
+}
+
+
+.tallo2 {
+    transform: rotate(-15deg);
+}
+
+
+.tallo3 {
+    transform: rotate(0deg);
+}
+
+
+.tallo4 {
+    transform: rotate(15deg);
+}
+
+
+.tallo5 {
+    transform: rotate(30deg);
+}
+
+
+/* ============================= */
+/* FLORES */
+/* ============================= */
+
+.flor {
+    position: absolute;
+
+    font-size: 60px;
+
+    z-index: 7;
+
+    filter:
+        drop-shadow(0 5px 5px black);
+
+    animation: florMovimiento 2.5s infinite ease-in-out;
+}
+
+
+.flor1 {
+    top: 65px;
+    left: 75px;
+}
+
+
+.flor2 {
+    top: 30px;
+    left: 235px;
+}
+
+
+.flor3 {
+    top: 65px;
+    right: 65px;
+}
+
+
+.flor4 {
+    top: 135px;
+    left: 225px;
+}
+
+
+/* ============================= */
+/* CARRITOS */
+/* ============================= */
+
+.carrito {
+    position: absolute;
+
+    width: 120px;
+    height: 80px;
+
+    z-index: 8;
+
+    animation: autoMovimiento 2s infinite ease-in-out;
+}
+
+
+.carrito1 {
+    top: 120px;
+    left: 90px;
+
+    transform: rotate(-20deg);
+}
+
+
+.carrito2 {
+    top: 80px;
+    left: 210px;
+
+    transform: rotate(-5deg);
+}
+
+
+.carrito3 {
+    top: 115px;
+    right: 80px;
+
+    transform: rotate(20deg);
+}
+
+
+.carrito4 {
+    top: 175px;
+    left: 145px;
+
+    transform: rotate(-10deg);
+}
+
+
+.carrito5 {
+    top: 175px;
+    right: 140px;
+
+    transform: rotate(10deg);
+}
+
+
+/* ============================= */
+/* CUERPO DEL AUTO */
+/* ============================= */
+
+.auto {
+    position: relative;
+
+    width: 120px;
+    height: 48px;
+
+    border: 4px solid #111;
+
+    border-radius:
+        30px
+        40px
+        12px
+        12px;
+
+    box-shadow:
+        inset 0 -8px rgba(0,0,0,0.25),
+        0 8px 10px rgba(0,0,0,0.7);
+}
+
+
+/* ROJO */
+
+.rojo {
+    background:
+        linear-gradient(
+            #ff4b3e,
+            #b40000
+        );
+}
+
+
+/* AZUL */
+
+.azul {
+    background:
+        linear-gradient(
+            #31a9ff,
+            #0050a8
+        );
+}
+
+
+/* AMARILLO */
+
+.amarillo {
+    background:
+        linear-gradient(
+            #fff338,
+            #e09b00
+        );
+}
+
+
+/* VERDE */
+
+.verde {
+    background:
+        linear-gradient(
+            #39e56c,
+            #08732e
+        );
+}
+
+
+/* NEGRO */
+
+.negro {
+    background:
+        linear-gradient(
+            #666,
+            #080808
+        );
+}
+
+
+/* ============================= */
+/* TECHO */
+/* ============================= */
+
+.techo {
+    position: absolute;
+
+    width: 62px;
+    height: 29px;
+
+    top: -25px;
+    left: 27px;
+
+    background: #202020;
+
+    border: 4px solid #111;
+
+    border-radius:
+        30px
+        30px
+        5px
+        5px;
+}
+
+
+/* ============================= */
+/* VIDRIO */
+/* ============================= */
+
+.vidrio {
+    position: absolute;
+
+    width: 46px;
+    height: 18px;
+
+    top: -18px;
+    left: 34px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #baf5ff,
+            #138bb7
+        );
+
+    border: 2px solid #111;
+
+    border-radius:
+        12px
+        12px
+        3px
+        3px;
+}
+
+
+/* ============================= */
+/* RUEDAS */
+/* ============================= */
+
+.rueda {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    bottom: -17px;
+
+    background: #111;
+
+    border:
+        4px solid #555;
+
+    border-radius: 50%;
+
+    z-index: 10;
+}
+
+
+.rueda::after {
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    top: 6px;
+    left: 6px;
+
+    background: #ccc;
+
+    border-radius: 50%;
+}
+
+
+.rueda-izq {
+    left: 12px;
+}
+
+
+.rueda-der {
+    right: 12px;
+}
+
+
+/* ============================= */
+/* LUCES */
+/* ============================= */
+
+.luz {
+    position: absolute;
+
+    width: 12px;
+    height: 8px;
+
+    right: 5px;
+    top: 18px;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px white;
+}
+
+
+/* ============================= */
+/* PAPEL DEL RAMO */
+/* ============================= */
+
+.papel {
+    position: absolute;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 350px;
+    height: 180px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff75b9,
+            #b60063
+        );
+
+    clip-path: polygon(
+        10% 0,
+        90% 0,
+        100% 100%,
+        50% 80%,
+        0 100%
+    );
+
+    border-radius: 20px;
+
+    z-index: 4;
+
+    box-shadow:
+        0 10px 20px black;
+}
+
+
+/* PLIEGUES DEL PAPEL */
+
+.pliegue {
+    position: absolute;
+
+    width: 5px;
+    height: 160px;
+
+    background: rgba(255,255,255,0.25);
+
+    bottom: 0;
+}
+
+
+.pliegue1 {
+    left: 30%;
+    transform: rotate(8deg);
+}
+
+
+.pliegue2 {
+    left: 50%;
+}
+
+
+.pliegue3 {
+    left: 70%;
+    transform: rotate(-8deg);
+}
+
+
+/* ============================= */
+/* MOÑO */
+/* ============================= */
+
+.moño {
+    position: absolute;
+
+    bottom: 35px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 100px;
+
+    z-index: 15;
+
+    filter:
+        drop-shadow(0 6px 5px black);
+}
+
+
+/* ============================= */
+/* BRILLOS */
+/* ============================= */
+
+.brillo {
+    position: absolute;
+
+    font-size: 30px;
+
+    z-index: 20;
+
+    animation:
+        brilloAnimacion 1.5s infinite alternate;
+}
+
+
+.brillo1 {
+    top: 30px;
+    left: 150px;
+}
+
+
+.brillo2 {
+    top: 210px;
+    left: 50px;
+}
+
+
+.brillo3 {
+    top: 220px;
+    right: 40px;
+}
+
+
+.brillo4 {
+    top: 20px;
+    right: 150px;
+}
+
+
+/* ============================= */
+/* BOTÓN */
+/* ============================= */
+
+#boton {
+    margin-top: 5px;
+
+    padding: 16px 35px;
+
+    border: 3px solid #ff66b5;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff1493,
+            #ff4da6
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 20px rgba(255,20,147,0.6);
+
+    transition: 0.3s;
+}
+
+
+#boton:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 25px #ff4da6;
+}
+
+
+/* ============================= */
+/* MENSAJE SORPRESA */
+/* ============================= */
+
+#sorpresa {
+    margin-top: 20px;
+
+    min-height: 35px;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    color: #ffb6dc;
+
+    text-shadow:
+        0 0 10px #ff1493;
+}
+
+
+/* ============================= */
+/* ANIMACIONES */
+/* ============================= */
+
+@keyframes autoMovimiento {
+
+    0%, 100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -8px;
+    }
+}
+
+
+@keyframes florMovimiento {
+
+    0%, 100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -7px;
+    }
+}
+
+
+@keyframes brilloAnimacion {
+
+    from {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+
+/* ============================= */
+/* CELULAR */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .mensaje {
+        font-size: 16px;
+    }
+
+    .ramo {
+        width: 350px;
+        height: 470px;
+    }
+
+    .carrito {
+        transform: scale(0.75);
+    }
+
+    .carrito1 {
+        left: 25px;
+    }
+
+    .carrito2 {
+        left: 120px;
+    }
+
+    .carrito3 {
+        right: 20px;
+    }
+
+    .carrito4 {
+        left: 70px;
+    }
+
+    .carrito5 {
+        right: 75px;
+    }
+
+    .flor {
+        font-size: 42px;
+    }
+
+    .flor1 {
+        left: 30px;
+    }
+
+    .flor2 {
+        left: 145px;
+    }
+
+    .flor3 {
+        right: 25px;
+    }
+
+    .flor4 {
+        left: 140px;
+    }
+
+    .papel {
+        width: 300px;
+    }
+
+    .moño {
+        font-size: 70px;
+    }
+}
